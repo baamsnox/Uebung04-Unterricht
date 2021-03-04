@@ -1,0 +1,49 @@
+import java.util.Scanner; 
+public class Uebung04 
+
+{ 
+    public static void main() 
+    { 
+        //Variablendeklaration 
+        double netto, mw=0, brutto=0; 
+        char berechnung;
+        Scanner sc1=new Scanner(System.in); 
+
+        //Eingabe 
+        System.out.print("Geben Sie den Nettobetrag ein: "); 
+        netto=sc1.nextDouble(); 
+
+        //Verarbeitung 
+        mw=netto/100*19; 
+        brutto=netto+mw; 
+
+        //Ausgabe 
+        System.out.println("Die Mehrwertsteuer beträgt: "+mw); 
+        System.out.println("Der Bruttobetrag lautet: "+brutto); 
+
+        System.out.print("Wollen sie noch eine Berechnung durchführen? j oder n: "); 
+        berechnung=sc1.next().charAt(0);
+
+        //for-Schleife 
+        for(netto=1;netto<=berechnung;) 
+        { 
+            //Eingabe 
+            System.out.println("Geben Sie den Nettobetrag ein: "); 
+            netto=sc1.nextDouble(); 
+
+            //Verarbeitung 
+            mw=netto/100*19; 
+            brutto=netto+mw; 
+
+            //Ausgabe 
+            System.out.println("Die Mehrwertsteuer beträgt: "+mw); 
+            System.out.println("Der Bruttobetrag lautet: "+brutto); 
+
+            System.out.print("Wollen sie noch eine Berechnung durchführen? j oder n: "); 
+            berechnung=sc1.next().charAt(0);
+            if(berechnung=='n')
+            {
+            }
+        } 
+  } 
+} 
